@@ -2,48 +2,13 @@
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
-<style>
-body {
-    font-family: 'Limelight';font-size: 22px;
-    background-image: url(https://i.imgur.com/TIqyQFA.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0px !important;
-}
-.video-fotos{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 24px;
-    justify-content: center;
-}
-.fotos{
-    margin: 115px 65px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50)
-}
-.video{
-    margin: 65px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50)
-}
-.img2{
-    padding: 50px;
-    background-image: url(https://i.imgur.com/nFpmc08.jpg); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.footer{
-    margin-bottom: 500px;
-
-}
-</style>
+<link href='./style.css' rel='stylesheet'>
 </head>
-<div style="margin: 24px; color: #FFB13C; font-size: 85px; font-family: Limelight; font-weight: 400; word-wrap: break-word; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50);">FELIZ ANIVERSÁRIO, AMOR &#129505 </div>
+<div style="margin: 24px; align-items: center; justify-content: center; color: #FFB13C; font-size: 85px; font-family: Limelight; font-weight: 400; word-wrap: break-word; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50);">FELIZ ANIVERSÁRIO, AMOR &#129505 </div>
 <div class="video-fotos col-12">
-    <div class="video" style="width: 1280px; height: 720px; background: #D9D9D9;"></div>
+    <div class="video" style="width: 1280px; height: 720px; background: #D9D9D9;">
+        VIDEOS
+    </div>
     <div class="fotos" style="width: 350px; height: 500px; background: #D9D9D9;"></div>
     <div class="fotos" style="width: 350px; height: 500px; background: #D9D9D9;"></div>
     <div class="fotos" style="width: 350px; height: 500px; background: #D9D9D9;"></div>
@@ -53,6 +18,8 @@ body {
 </div>
 <div class="img2">
     <div class="footer" style="color: #FFB13C; font-size: 85px; font-family: Limelight; font-weight: 400; word-wrap: break-word">FELIZ ANIVERSÁRIO, AMOR</div>
-    <div style="color: #FFB13C; font-size: 85px; font-family: Limelight; font-weight: 400; word-wrap: break-word">TE AMO MUITO</div>
+    <div id="love" style="display:none; color: #FFB13C; font-size: 85px; font-family: Limelight; font-weight: 400; word-wrap: break-word">TE AMO MUITO</div>
+    <input class="btn-love" type="button" value="CLICK PARA SURPRESA">
 </div>
 </html>
+<script src="script.js"></script>

@@ -1,27 +1,64 @@
 body {
-    font-family: 'Limelight';font-size: 22px;
+    font-family: 'Limelight';
+    font-size: 22px;
     background-image: url(https://i.imgur.com/TIqyQFA.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px !important;
 }
-.video-fotos{
+
+.video-fotos {
     display: flex;
     flex-wrap: wrap;
     padding: 24px;
     justify-content: center;
 }
-.fotos{
+
+.fotos {
     margin: 115px 65px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    transition: transform 125ms ease-in-out;
+    padding: 25px;
 }
-.video{
+
+.desc{
+    padding: 12px 8px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    text-align: center;
+    display: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fotos:hover {
+    transform: rotate(2deg);
+    /* box-shadow: 0px 0px 10px rgba(111, 0, 255, 0.5); */
+    .desc{
+        display: flex;
+    }
+}
+
+.video {
     margin: 65px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    transition: transform 125ms ease-in-out;
 }
-.img2{
+
+.video:hover {
+    transform: scale(1.05);
+}
+
+.img2 {
     padding: 50px;
-    background-image: url(https://i.imgur.com/nFpmc08.jpg); 
+    background-image: url(https://i.imgur.com/nFpmc08.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,18 +67,19 @@ body {
     justify-content: center;
     align-items: center;
 }
-.footer{
+
+.footer {
     margin-bottom: 500px;
 }
 
-.btn-love{
+.btn-love {
     background-color: aliceblue;
     padding: 8px;
     border-radius: 8px;
 }
 
-@media (max-width: 768px){
-    .img2{
+@media (max-width: 768px) {
+    .img2 {
         display: none !important;
     }
 }

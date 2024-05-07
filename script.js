@@ -35,9 +35,14 @@ atualizarContagemTempoNamoro(dataReferenciaNamoro, intervaloAtualizacao, "tempoD
 
 const dataAtual = new Date();
 const diaAtual = dataAtual.getDate();
+const mesAtual = dataAtual.getMonth();
 
 if (diaAtual === 7) {
-  document.getElementById('aniversario').style.display = 'block';
+  document.getElementById('aniversario-nosso').style.display = 'block';
+}
+
+if (diaAtual === 3 && mesAtual === 12) {
+  document.getElementById('aniversario-Laura').style.display = 'block';
 }
 
 

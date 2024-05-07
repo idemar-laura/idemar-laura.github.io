@@ -11,7 +11,7 @@ body {
     margin: 24px;
     align-items: center;
     justify-content: center;
-    color: #FFB13C;
+    color: #fd8e3f;
     font-size: 85px;
     font-family: Limelight;
     font-weight: 400;
@@ -20,18 +20,20 @@ body {
 }
 
 .contagem {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
     display: flex;
     justify-content: space-between;
     margin: 32px;
 
     h1 {
-        color: #fff;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        color: purple;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.288);
     }
 
     div {
-        color: rosybrown;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        color: #fd8e3f;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -49,6 +51,7 @@ body {
     padding: 25px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .desc {
@@ -75,6 +78,24 @@ img {
     .desc {
         display: flex;
     }
+}
+
+.carta {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    transition: transform 125ms ease-in-out;
+}
+
+.carta:hover {
+    transform: scale(1.05);
+}
+
+button {
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 16px;
+    border: none;
+    color: #fff;
+    background-color: #fd8e3f;
 }
 
 .video {
@@ -109,8 +130,44 @@ img {
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .img2 {
         display: none !important;
     }
+
+    .carta {
+    width: 400px;
+    }
+
+    .contagem {
+        font-size: 16px;
+        margin: 20px;
+    }
+}
+
+.carta {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.carta h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carta p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.assinatura {
+    margin-top: 20px;
+    font-style: italic;
 }

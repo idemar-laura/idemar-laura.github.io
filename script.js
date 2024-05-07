@@ -26,8 +26,8 @@ function atualizarContagemTempoNamoro(dataReferencia, intervalo, id, desc) {
     }, intervalo);
 }
 
-const dataReferenciaNamoro = new Date('2023-10-07T18:30:00');
-const dataReferenciaSaida = new Date('2023-01-07T17:30:00');
+const dataReferenciaNamoro = new Date('2023-10-07T17:20');
+const dataReferenciaSaida = new Date('2023-01-07T19:00');
 const intervaloAtualizacao = 1000; // 1 segundo
 
 atualizarContagemTempoNamoro(dataReferenciaSaida, intervaloAtualizacao, "tempoDecorridoSaida", "o dia mais feliz da minha vida");
@@ -39,6 +39,28 @@ const diaAtual = dataAtual.getDate();
 if (diaAtual === 7) {
   document.getElementById('aniversario').style.display = 'block';
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function verificarLarguraJanela() {
+        const larguraJanela = window.innerWidth;
+        console.log(larguraJanela);
+
+        if (larguraJanela <= 1100) { // Condição para dispositivos móveis (pode ajustar o valor conforme necessário)
+            document.querySelector('.carousel-container').style.display = 'block';
+            document.getElementById('photoContainer').style.display = 'none';
+            displayPhotos1();
+        } else {
+            document.getElementById('photoContainer').style.display = 'flex';
+            document.querySelector('.carousel-container').style.display = 'none';
+            displayPhotos();
+        }
+    }
+
+    verificarLarguraJanela(); // Verifica a largura da janela ao carregar a página
+
+    window.addEventListener('resize', verificarLarguraJanela); // Verifica a largura ao redimensionar a janela
+});
 
 const photosData = [
     { 
@@ -68,6 +90,30 @@ const photosData = [
     { 
         imageUrl: 'IMG-20230514-WA0001.jpg',
         description: 'O nosso pagode, melhor dia possível, ver todos que eu amo, com a pessoa que mais amo nesse mundo'
+    },
+    { 
+        imageUrl: 'IMG-20230611-WA0010.jpg',
+        description: 'O nosso JUCA, te convenci a ir e ainda conheci suas amigas que viram o quanto que eu realmente gostava de você.'
+    },
+    { 
+        imageUrl: 'IMG-20230709-WA0012.jpg',
+        description: 'Rolê aleatório essa foto totalmente kakakakaka'
+    },
+    { 
+        imageUrl: 'IMG-20231102-WA0032.jpg',
+        description: 'Te amo para todo o sempre, e nunca cansarei de mostrar meu amor ❤️'
+    },
+    { 
+        imageUrl: 'Screenshot_20230202_162951_Instagram.png',
+        description: 'Sim, eu tenho essa foto salva, eu fiquei bobo de receber isso hihihi'
+    },
+    { 
+        imageUrl: 'Screenshot_20230205_142233_BeReal.png',
+        description: 'Meus dois amores em uma foto só ❤️'
+    },
+    { 
+        imageUrl: 'Screenshot_20230614_181456_Instagram.png',
+        description: 'O fatídico dia que entrei para o seu feed, e fui eternizado lá :)'
     }
 ];
 
@@ -83,6 +129,9 @@ function shuffleArray(array) {
 // Função para criar os elementos HTML e exibir as fotos e descrições
 function displayPhotos() {
     const photoContainer = document.getElementById('photoContainer');
+    const photoContainer1 = document.getElementById('photoContainer1');
+    photoContainer.childNodes.forEach(node => photoContainer.removeChild(node));    
+    photoContainer1.childNodes.forEach(node => photoContainer1.removeChild(node));    
     const shuffledPhotos = shuffleArray(photosData);
 
     shuffledPhotos.forEach(photo => {
@@ -105,6 +154,51 @@ function displayPhotos() {
     });
 }
 
+function displayPhotos1() {
+    const photoContainer1 = document.getElementById('photoContainer1');
+    const photoContainer = document.getElementById('photoContainer');
+    photoContainer.childNodes.forEach(node => photoContainer.removeChild(node));   
+    photoContainer1.childNodes.forEach(node => photoContainer1.removeChild(node));    
+    const shuffledPhotos = shuffleArray(photosData);
 
-// Chama a função para exibir as fotos e descrições
-displayPhotos();
+    shuffledPhotos.forEach(photo => {
+        const card = document.createElement('div');
+        card.classList.add('fotos');
+        card.style = "width: 350px; height: 500px; background: #D9D9D9;"
+
+        const img = document.createElement('img');
+        img.classList.add('photo-img');
+        img.src = "./assets/"+photo.imageUrl;
+        img.alt = photo.description;
+
+        const desc = document.createElement('span');
+        desc.textContent = photo.description;
+        desc.classList.add("desc")
+
+        card.appendChild(img);
+        card.appendChild(desc);
+        photoContainer1.appendChild(card);
+    });
+}
+
+
+function gerarPoemaParaLaura() {
+    const carta = document.getElementById("carta");
+    // Lista de palavras para usar no poema
+    const adjetivos = ['linda', 'encantadora', 'doce', 'radiante', 'apaixonante'];
+    const sentimentos = ['amor', 'ternura', 'paixão', 'carinho', 'admiração'];
+    const acoes = ['abraçar', 'beijar', 'acarinhar', 'cuidar', 'celebrar'];
+
+    // Gerar versos aleatórios usando as palavras acima
+    const verso1 = `Para minha ${adjetivos[Math.floor(Math.random() * adjetivos.length)]} Laura,`;
+    const verso2 = `Teu ${sentimentos[Math.floor(Math.random() * sentimentos.length)]} é a chama que aquece meu coração,`;
+    const verso3 = `Em cada momento juntos, desejo ${acoes[Math.floor(Math.random() * acoes.length)]} te e te amar com devoção.`;
+
+    // Retornar o poema completo
+    carta.innerHTML = `<h1>${verso1}</h1>\n<p>${verso2}</p>\n<p>${verso3}</p>`;
+}
+
+gerarPoemaParaLaura();
+
+const btn = document.getElementById("btn");
+btn.addEventListener("click", () => {gerarPoemaParaLaura()});

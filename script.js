@@ -3,7 +3,7 @@ function calcularDiferencaTempo(dataReferencia) {
 
     // Calcula a diferença de tempo em milissegundos
     const diferencaTempo = dataAtual.getTime() - dataReferencia.getTime();
-    console.log(diferencaTempo);
+    // console.log(diferencaTempo);
 
     // Calcula anos, meses, dias, horas, minutos e segundos
     const anos = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24 * 365));
@@ -49,7 +49,7 @@ if (diaAtual === 3 && mesAtual === 12) {
 document.addEventListener('DOMContentLoaded', function() {
     function verificarLarguraJanela() {
         const larguraJanela = window.innerWidth;
-        console.log(larguraJanela);
+        // console.log(larguraJanela);
 
         if (larguraJanela <= 1100) { // Condição para dispositivos móveis (pode ajustar o valor conforme necessário)
             document.querySelector('.carousel-container').style.display = 'block';
@@ -207,3 +207,20 @@ gerarPoemaParaLaura();
 
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {gerarPoemaParaLaura()});
+
+var namoro = false;
+document.body.addEventListener("click", (el) => {
+    if (el.target.id == 'btn-tempo') {
+        namoro = !namoro;
+    }
+    
+    if(namoro){
+        document.getElementById('tempoDecorridoNamoro').style.display = 'block';
+        document.getElementById('tempoDecorridoSaida').style.display = 'none';
+    } else {
+        document.getElementById('tempoDecorridoNamoro').style.display = 'none';
+        document.getElementById('tempoDecorridoSaida').style.display = 'block';
+    
+    }
+});
+

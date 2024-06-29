@@ -94,7 +94,7 @@ function displayPhotos() {
     shuffledPhotos.forEach(photo => {
         const card = document.createElement('div');
         card.classList.add('fotos');
-        card.style = "width: 350px; height: 500px; background: #D9D9D9;"
+        card.style = "width: 175px; height: 250px; background: #D9D9D9;"
 
         const img = document.createElement('img');
         img.classList.add('photo-img');
@@ -121,7 +121,7 @@ function displayPhotos1() {
     shuffledPhotos.forEach(photo => {
         const card = document.createElement('div');
         card.classList.add('fotos');
-        card.style = "width: 350px; height: 500px; background: #D9D9D9;"
+        card.style = "width: 175px; height: 250px; background: #D9D9D9;"
 
         const img = document.createElement('img');
         img.classList.add('photo-img');

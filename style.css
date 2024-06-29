@@ -1,8 +1,8 @@
 body {
     font-family: 'Limelight';
     font-size: 22px;
-    /* background-image: url(https://i.imgur.com/TIqyQFA.jpg); */
-    background-color: bisque;
+    background-image: url(https://i.imgur.com/TIqyQFA.jpg);
+    /* background-color: bisque; */
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px !important;
@@ -13,6 +13,11 @@ body {
     justify-content: space-between;
     height: 15px;
     margin: 24px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
 .links {
@@ -24,8 +29,9 @@ body {
         font-size: 20px;
         text-decoration: none;
     }
+
     a:hover {
-        color:      rgb(29, 29, 29);
+        color: rgb(133, 133, 133);
     }
 }
 
@@ -67,17 +73,18 @@ body {
 }
 
 .fotos {
-    margin: 72px 36px;
+    margin: 36px 18px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
     transition: transform 125ms ease-in-out;
-    padding: 25px;
+    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .desc {
-    padding: 12px 8px;
+    padding: 6px 4px;
+    font-size: 18px;
     /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
     display: none;
@@ -208,6 +215,11 @@ button {
     box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
     border-radius: 8px;
     will-change: transform;
+
+    div {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
 }
 
 .album-canva iframe {

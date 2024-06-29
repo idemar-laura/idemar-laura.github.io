@@ -1,10 +1,32 @@
 body {
     font-family: 'Limelight';
     font-size: 22px;
-    background-image: url(https://i.imgur.com/TIqyQFA.jpg);
+    /* background-image: url(https://i.imgur.com/TIqyQFA.jpg); */
+    background-color: bisque;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 15px;
+    margin: 24px;
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+
+    a {
+        color: #000;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    a:hover {
+        color:      rgb(29, 29, 29);
+    }
 }
 
 .aniversario {
@@ -136,7 +158,7 @@ button {
     }
 
     .carta {
-    width: 400px;
+        width: 400px;
     }
 
     .contagem {
@@ -170,4 +192,29 @@ button {
 .assinatura {
     margin-top: 20px;
     font-style: italic;
+}
+
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    /* Ajuste conforme necessário */
+}
+
+.album-canva {
+    position: relative;
+    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+    border-radius: 8px;
+    will-change: transform;
+}
+
+.album-canva iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
 }

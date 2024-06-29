@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
     <link href='./style.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css"
@@ -10,25 +11,32 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
 </head>
-<section class="contagem">
-    <section style="padding-right: 12px;">
-        <h1 id="btn-tempo">Contagem de Tempo</h1>
-        <div id="tempoDecorridoSaida"></div>
-        <div id="tempoDecorridoNamoro" style="display: none;"></div>
+
+<header>
+    <section class="col-12 header">
+        <div>
+            <a href="">LAURA E IDEMAR</a>
+        </div>
+        <div class="links">
+            <a href="./pages/tempo-namoro/tempo-namoro.html">Tempo de Namoro</a>
+            <a href="./pages/canva/canva.html">Álbum de Fotos</a>
+        </div>
     </section>
-</section>
+</header>
 
 <div id="aniversario-Laura" class="aniversario" style="display: none;">
     FELIZ NOSSO ANIVERSÁRIO, AMOR &#129505 </div>
 <div id="aniversario-nosso" class="aniversario" style="display: none;">
     FELIZ NOSSO DIA 7, AMOR &#129505 </div>
-
-<div class="video-fotos" id="photoContainer"></div>
-
-<div class="d-none carousel-container">
-    <div class="carousel video-fotos" id="photoContainer1"></div>
-</div>
 <!-- <a href="./pag2/index-copy.html">jdbgkjsdbnkgjd</a> -->
+
+<section style="display: flex; justify-content: center;">
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/0pQrxj2ch2M?si=34Z0APs8hS4eW_g5"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
 <div class="carta">
     <div id="carta"></div>
     <div class="assinatura">
@@ -38,35 +46,5 @@
     <button id="btn">Gerar</button>
 </div>
 
-<section style="display: flex; justify-content: center;">
-    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/0pQrxj2ch2M?si=34Z0APs8hS4eW_g5"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
-
 </html>
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.carousel').slick({
-            dots: true, // Exibe os indicadores de navegação
-            arrows: false, // Oculta as setas de navegação
-            infinite: true, // Permite a rotação infinita
-            speed: 300, // Velocidade da animação em milissegundos
-            slidesToShow: 4, // Quantidade de slides visíveis ao mesmo tempo
-            slidesToScroll: 4, // Quantidade de slides para rolar por vez
-            responsive: [
-                {
-                    breakpoint: 1100, // Define o ponto de quebra para dispositivos móveis
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-            ]
-        });
-    });
-</script>

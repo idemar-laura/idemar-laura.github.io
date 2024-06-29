@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
+    <link href='../../style.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+</head>
+<header>
+    <section class="col-12 header">
+        <div>
+            <a href="../../index.html">LAURA E IDEMAR</a>
+        </div>
+        <div class="links">
+            <a href="../tempo-namoro/tempo-namoro.html">Tempo de Namoro</a>
+            <a href="../canva/canva.html">Álbum de Fotos</a>
+        </div>
+    </section>
+</header>
+<section class="col-12 album-canva center-section">
+    <div style="position: relative; width: 100%; height: 0; padding-top: 141.8919%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+        <iframe loading="lazy"
+            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+            src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGBOftG4LM&#x2F;fvKKu79O0ApNJnh3QSMcMQ&#x2F;view?embed"
+            allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGBOftG4LM&#x2F;fvKKu79O0ApNJnh3QSMcMQ&#x2F;view?utm_content=DAGBOftG4LM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+        target="_blank" rel="noopener">
+</section>
+
+<div class="video-fotos" id="photoContainer"></div>
+
+<div class="d-none carousel-container">
+    <div class="carousel video-fotos" id="photoContainer1"></div>
+</div>
+
+</html>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.carousel').slick({
+            dots: true, // Exibe os indicadores de navegação
+            arrows: false, // Oculta as setas de navegação
+            infinite: true, // Permite a rotação infinita
+            speed: 300, // Velocidade da animação em milissegundos
+            slidesToShow: 4, // Quantidade de slides visíveis ao mesmo tempo
+            slidesToScroll: 4, // Quantidade de slides para rolar por vez
+            responsive: [
+                {
+                    breakpoint: 1100, // Define o ponto de quebra para dispositivos móveis
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        });
+    });
+</script>

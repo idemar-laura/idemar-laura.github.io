@@ -1,3 +1,11 @@
+:root{
+    --almond: #ECDCC9;
+    --fire-engine: #D62828;
+    --violet: #4D243D;
+    --tan: #D0A98F;
+    --wheat: #EDD4B2;
+}
+
 body {
     font-family: 'Limelight';
     font-size: 22px;
@@ -17,11 +25,11 @@ body {
     padding-right: 32px !important;
     margin-bottom: 24px;
     box-shadow: 0 0.5px 8px 0px #00000069;
-    background-color: #ECDCC9;
+    background-color: var(--almond);
 
     a {
         text-decoration: none;
-        color: #4D243D;
+        color: var(--violet);
     }
 }
 
@@ -30,7 +38,7 @@ body {
     gap: 32px;
 
     a {
-        color: #4D243D;
+        color: var(--violet);
         font-size: 20px;
         text-decoration: none;
     }
@@ -80,12 +88,12 @@ body {
     margin: 32px;
 
     h1 {
-        color: #4D243D;
+        color: var(--violet);
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.288);
     }
 
     div {
-        color: #4D243D;
+        color: var(--violet);
         /* color: #000; */
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
     }
@@ -100,7 +108,7 @@ body {
 
 .fotos {
     margin: 36px 18px;
-    box-shadow: 0px 4px 8px #4D243D;
+    box-shadow: 0px 4px 8px --violet;
     /* color: #4D243D; */
     transition: transform 125ms ease-in-out;
     padding: 12px;

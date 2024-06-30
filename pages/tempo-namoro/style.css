@@ -1,3 +1,7 @@
+body{
+  background-image: none !important;
+}
+
 .flip-clock {
   text-align: center;
   perspective: 400px;
@@ -14,13 +18,14 @@
 
 .flip-clock__slot {
   font-size: 2vw;
+  color: #200f1a;
 }
 
 .card {
   display: block;
   position: relative; 
   padding-bottom: 0.72em;
-  font-size: 9vw;
+  font-size: 7vw;
   line-height: 0.95;
 }
 
@@ -34,7 +39,7 @@
   background: #222;
   padding: 0.25em 0.25em;
   border-radius: 0.15em 0.15em 0 0;
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   transform-style: preserve-3d;
   width: 1.8em;
   transform: translateZ(0);

@@ -1,8 +1,9 @@
 body {
     font-family: 'Limelight';
     font-size: 22px;
-    background-image: url(https://i.imgur.com/TIqyQFA.jpg);
-    /* background-color: bisque; */
+    /* background-image: url(https://i.imgur.com/TIqyQFA.jpg); */
+    /* background-color: #EDD4B2; */
+    background-color: #D0A98F;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px !important;
@@ -12,11 +13,15 @@ body {
     display: flex;
     justify-content: space-between;
     height: 15px;
-    margin: 24px;
+    padding: 24px;
+    padding-right: 32px !important;
+    margin-bottom: 24px;
+    box-shadow: 0 0.5px 8px 0px #00000069;
+    background-color: #ECDCC9;
 
     a {
         text-decoration: none;
-        color: #000;
+        color: #4D243D;
     }
 }
 
@@ -25,15 +30,35 @@ body {
     gap: 32px;
 
     a {
-        color: #000;
+        color: #4D243D;
         font-size: 20px;
         text-decoration: none;
     }
 
-    a:hover {
-        color: rgb(133, 133, 133);
-    }
 }
+
+.animated-text {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+  }
+  .animated-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -100%;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .animated-text:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 
 .aniversario {
     margin: 24px;
@@ -48,19 +73,20 @@ body {
 }
 
 .contagem {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: 32px;
     display: flex;
     justify-content: space-between;
     margin: 32px;
 
     h1 {
-        color: #000;
+        color: #4D243D;
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.288);
     }
 
     div {
-        color: #000;
+        color: #4D243D;
+        /* color: #000; */
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
     }
 }
@@ -74,7 +100,8 @@ body {
 
 .fotos {
     margin: 36px 18px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 4px 8px #4D243D;
+    /* color: #4D243D; */
     transition: transform 125ms ease-in-out;
     padding: 12px;
     display: flex;
@@ -88,7 +115,7 @@ body {
     /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
     display: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
+    background: linear-gradient(0deg, #4d243dbd, transparent);
     position: absolute;
     bottom: 0;
     left: 0;

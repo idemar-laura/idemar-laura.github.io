@@ -34,24 +34,24 @@ const intervaloAtualizacao = 1000; // 1 segundo
 atualizarContagemTempoNamoro(dataReferenciaSaida, intervaloAtualizacao, "tempoDecorridoSaida", "o dia mais feliz da minha vida");
 atualizarContagemTempoNamoro(dataReferenciaNamoro, intervaloAtualizacao, "tempoDecorridoNamoro", "o começo do nosso namoro oficial");
 
-var namoro = false;
+var namoro = true;
 document.body.addEventListener("click", (el) => {
-    if (el.target.id == 'btn-tempo') {
+    // if (el.target.id == 'btn-tempo') {
         namoro = !namoro;
-    }
+    // }
     
     if(namoro){
         // document.getElementById('tempoDecorridoNamoro').style.display = 'block';
         // document.getElementById('tempoDecorridoSaida').style.display = 'none';
         document.getElementById('tempoDecorridoNamoroF').style.display = 'block';
         document.getElementById('tempoDecorridoSaidaF').style.display = 'none';
-        document.getElementById('btn-tempo').innerHTML = 'Contagem de tempo de namoro'
+        document.getElementById('btn-tempo').innerHTML = 'Tempo de Namoro'
     } else {
         // document.getElementById('tempoDecorridoNamoro').style.display = 'none';
         // document.getElementById('tempoDecorridoSaida').style.display = 'block';
         document.getElementById('tempoDecorridoNamoroF').style.display = 'none';
         document.getElementById('tempoDecorridoSaidaF').style.display = 'block';
-        document.getElementById('btn-tempo').innerHTML = 'Contagem de tempo do melhor dia da minha vida'
+        document.getElementById('btn-tempo').innerHTML = 'Tempo do Melhor Dia Da Minha Vida'
     
     }
 });

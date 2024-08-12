@@ -113,10 +113,10 @@ function getTimeRemaining(endtime) {
     'Total': t,
     'Anos': Math.floor(t / (1000 * 60 * 60 * 24 * 365)),
     'Meses': Math.floor((t % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)),
-    'Dias': Math.floor(t / (1000 * 60 * 60 * 24)),
-    'Horas': Math.floor((t / (1000 * 60 * 60)) % 24),
-    'Minutos': Math.floor((t / 1000 / 60) % 60),
-    'Segundos': Math.floor((t / 1000) % 60)
+    'Dias': Math.floor(t % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24),
+    'Horas': Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    'Minutos': Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)),
+    'Segundos': Math.floor((t % (1000 * 60)) / 1000)
   };
 }
 

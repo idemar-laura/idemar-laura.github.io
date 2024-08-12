@@ -113,7 +113,7 @@ function getTimeRemaining(endtime) {
     'Total': t,
     'Anos': Math.floor(t / (1000 * 60 * 60 * 24 * 365)),
     'Meses': Math.floor((t % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)),
-    'Dias': Math.floor(t % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24),
+    'Dias': Math.floor((t % (1000 * 60 * 60 * 24 * 30.43)) / (1000 * 60 * 60 * 24)),
     'Horas': Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     'Minutos': Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)),
     'Segundos': Math.floor((t % (1000 * 60)) / 1000)
@@ -162,10 +162,10 @@ function Clock(countdown) {
   setTimeout(updateClock,500);
 }
 
-var deadline = new Date(Date.parse(dataReferenciaNamoro) + 12 * 24 * 60 * 60 * 1000);
+var deadline = new Date(Date.parse(dataReferenciaNamoro));
 var c = new Clock(deadline, function(){ alert('countdown complete') });
 document.getElementById('tempoDecorridoNamoroF').appendChild(c.el);
 
-var clock = new Clock(new Date(Date.parse(dataReferenciaSaida) + 12 * 24 * 60 * 60 * 1000));
+var clock = new Clock(new Date(Date.parse(dataReferenciaSaida)));
 document.getElementById('tempoDecorridoSaidaF').appendChild(clock.el);
 

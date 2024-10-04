@@ -9,11 +9,12 @@
 body {
     font-family: 'Limelight';
     font-size: 22px;
+    background-image: url(./assets/covercon_favorite_border_iconpattern.svg);
     /* background-image: url(https://i.imgur.com/TIqyQFA.jpg); */
     /* background-color: #EDD4B2; */
     background-color: #D0A98F;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
     margin: 0px !important;
 }
 
